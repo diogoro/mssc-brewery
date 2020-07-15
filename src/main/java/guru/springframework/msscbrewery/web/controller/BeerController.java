@@ -45,7 +45,7 @@ public class BeerController {
 		HttpHeaders headers = new HttpHeaders();
 		// The correct is return the full url
 		// TODO Add hostmane at url
-		headers.add("Location", "/api/v1/beer" + saveDto.getId().toString());
+		headers.add("Location", "/api/v1/beer/" + saveDto.getId().toString());
 
 		return new ResponseEntity(headers, HttpStatus.CREATED);
 	}
