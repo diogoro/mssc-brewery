@@ -66,4 +66,5 @@ public class BeerController {
 		beerService.deleteBeerById(beerId);
 
 	}
+
 }

@@ -2,6 +2,8 @@ package guru.springframework.msscbrewery.web.controller;
 
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +37,7 @@ public class CustomerController {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping
-	public ResponseEntity createCustomer(@RequestBody CustomerDTO customerDTO) {
+	public ResponseEntity createCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
 		CustomerDTO saveDto = customerService.saveNewCustomer(customerDTO);
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Location", "/api/v1/customer/" + saveDto.getId().toString() );
@@ -45,7 +47,7 @@ public class CustomerController {
 	
 	@PutMapping({ "/{customerId}" })
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void updateCustomer(@RequestBody CustomerDTO customerDTO, @PathVariable("customerId") UUID customerId) {
+	public void updateCustomer(@Valid @RequestBody CustomerDTO customerDTO, @PathVariable("customerId") UUID customerId) {
 		customerService.updateCustomer(customerId, customerDTO);
 	}
 	
