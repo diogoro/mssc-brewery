@@ -2,6 +2,8 @@ package guru.springframework.msscbrewery.web.controller;
 
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,7 +41,7 @@ public class BeerController {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping // Using POST to create a new Beer
-	public ResponseEntity handlePost(@RequestBody BeerDto beerDto) {
+	public ResponseEntity handlePost(@Valid @RequestBody BeerDto beerDto) {
 		BeerDto saveDto = beerService.saveNewBeer(beerDto);
 
 		HttpHeaders headers = new HttpHeaders();
@@ -52,7 +54,7 @@ public class BeerController {
 
 	@SuppressWarnings("rawtypes")
 	@PutMapping({ "/{beerId}" })
-	public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
+	public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId,@Valid @RequestBody BeerDto beerDto) {
 		beerService.updateBeer(beerId, beerDto);
 
 		return new ResponseEntity(HttpStatus.NO_CONTENT);
