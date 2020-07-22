@@ -6,6 +6,7 @@
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/mappers/CustomerMapper.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/CustomerServiceImpl.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/CustomerDTO.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/mappers/DateMapper.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/BeerService.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/MvcExceptionHandler.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/v2/BeerDtoV2.java
