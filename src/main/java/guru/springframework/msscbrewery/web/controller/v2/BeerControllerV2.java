@@ -18,18 +18,17 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import guru.springframework.msscbrewery.services.v2.BeerServiceV2;
-import guru.springframework.msscbrewery.web.model.BeerDto;
 import guru.springframework.msscbrewery.web.model.v2.BeerDtoV2;
-
+import lombok.RequiredArgsConstructor;
+import lombok.val;
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @RequestMapping("/api/v2/beer")
 @RestController
+@RequiredArgsConstructor
 public class BeerControllerV2 {
 	
 	private final BeerServiceV2 beerServiceV2;
-
-	public BeerControllerV2(BeerServiceV2 beerServiceV2) {
-		this.beerServiceV2 = beerServiceV2;
-	}
 
 	@GetMapping({ "/{beerId}" })
 	public ResponseEntity<BeerDtoV2> getBeer(@PathVariable("beerId") UUID beerId) {
@@ -40,13 +39,16 @@ public class BeerControllerV2 {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping // Using POST to create a new Beer
 	public ResponseEntity handlePost(@RequestBody @Valid BeerDtoV2 beerDto) {
-		BeerDto saveDto = beerServiceV2.saveNewBeer(beerDto);
+		log.debug("start handlePost ...");
+		
+		val saveDto = beerServiceV2.saveNewBeer(beerDto);
 
-		HttpHeaders headers = new HttpHeaders();
+		var headers = new HttpHeaders();
 		// The correct is return the full url
 		// TODO Add hostmane at url
 		headers.add("Location", "/api/v1/beer/" + saveDto.getId().toString());
 
+		log.debug("end handlePost. Respense headers: " + headers.toString());
 		return new ResponseEntity(headers, HttpStatus.CREATED);
 	}
 
