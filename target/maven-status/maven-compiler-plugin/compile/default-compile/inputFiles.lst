@@ -1,5 +1,15 @@
-/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/BeerController.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/BeerDto.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/MsscBreweryApplication.java
-/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/BeerServiceImpl.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/CustomerService.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/v2/BeerControllerV2.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/CustomerServiceImpl.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/CustomerDTO.java
 /Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/BeerService.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/MvcExceptionHandler.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/v2/BeerDtoV2.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/v2/BeerServiceV2Impl.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/model/v2/BeerStyleEnum.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/v2/BeerServiceV2.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/BeerController.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/web/controller/CustomerController.java
+/Users/diogoro/workspace/mssc-brewery/src/main/java/guru/springframework/msscbrewery/services/BeerServiceImpl.java
