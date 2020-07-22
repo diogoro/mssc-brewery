@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: guru.springframework.msscbrewery.web.controller.BeerControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.911 s <<< FAILURE! - in guru.springframework.msscbrewery.web.controller.BeerControllerTest
-testGetBeer  Time elapsed: 0.194 s  <<< FAILURE!
-java.lang.AssertionError: Content type expected:<application/json;charset=UTF-8> but was:<application/json>
-	at guru.springframework.msscbrewery.web.controller.BeerControllerTest.testGetBeer(BeerControllerTest.java:60)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.161 s - in guru.springframework.msscbrewery.web.controller.BeerControllerTest
